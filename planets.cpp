@@ -10,7 +10,7 @@ Planets::Planets(QWidget *parent) :
     std::mt19937 mt(rd());
     //std::mt19937 mt(1);
 
-    std::uniform_int_distribution<int> dist(0,400);
+    std::uniform_int_distribution<int> dist(0,410);
     std::uniform_int_distribution<int> radius(0,359);
     std::uniform_int_distribution<int> randMass(1,20);
     Particals* tempPartical=NULL;
