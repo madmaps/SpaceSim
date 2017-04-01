@@ -38,9 +38,11 @@ Planets::Planets(QWidget *parent) :
             //tempPartical = new Particals(dist(mt)+200,(dist(mt)/8)+200,0,0,randMass(mt));
 
             good = 1;
+            double distance;
             for(int j=0;j<planets.size();j++)
             {
-                if(tempPartical->getX() == planets.at(j)->getX() && tempPartical->getY() == planets.at(j)->getY())
+				distance = sqrt(pow(planets.at(j)->getX()-tempPartical->getX(),2)+pow(planets.at(j)->getY()-tempPartical->getY(),2));
+                if(distance<fabs(planets.at(j)->getDiameter()/2+tempPartical->getDiameter()/2))
                 {
                     good = 0;
                 }
